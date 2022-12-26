@@ -35,7 +35,7 @@
                             <a href="/" class="nav-link">Entrar</a>
                         </li>
                         <li class="nav-item">
-                            <a href="/" class="nav-link">Cadastrar Movimento</a>
+                            <a href="/moviments/create" class="nav-link">Cadastrar Movimento</a>
                         </li>
                     </ul>
                 </div>
@@ -45,5 +45,8 @@
     <footer>
         <p>Movimentos do Crossfit &copy; 2022</p>
     </footer>
+    
+    {{-- ION icons --}}
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     </body>
 </html>

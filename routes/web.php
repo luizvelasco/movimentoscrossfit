@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+use App\Http\Controllers\MovimentController;
+
+Route::get('/', [MovimentController::class, 'index']);
+Route::get('/moviments/create', [MovimentController::class, 'create']);
