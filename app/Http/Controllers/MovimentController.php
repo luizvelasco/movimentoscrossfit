@@ -28,6 +28,6 @@ class MovimentController extends Controller
 
         $moviment->save();
 
-        return redirect('/');
+        return redirect('/')->with('msg', 'Movimento criado com sucesso');
     }
 }
