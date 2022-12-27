@@ -1,8 +1,143 @@
+/*General*/
 * {
     font-family: 'Roboto';
 }
 
+body {
+    min-height: 100vh;
+    padding-bottom: 100px;
+    position: relative;
+}
+
+header
+{
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+
+.row {
+    margin: 0;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.btn-primary {
+    background-color: #f2a340;
+    border: 2px solid #c28008;
+}
+
+.btn-primary:hover {
+    background-color: #c28008;
+    border-color: #c28008;
+}
+
+/*Navbar*/
+
 #navbar img {
     width: 70px;
+}
 
+#navbar {
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 5px 0;
+}
+
+#navbar a {
+    font-size: 14px;
+    color: #757575;
+}
+
+#navbar a:hover {
+    color: #f2a340;
+}
+
+/*Search Container*/
+
+#search-container {
+    background-image: url("../img/banner.webp");
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    padding: 50px;
+    text-align: center;
+}
+
+#search-container h1{
+    color: tomato;
+    margin-bottom: 30px;
+    font-weight: 900;
+}
+
+#search-container form{
+    width: 50%;
+    margin: 0 auto;
+}
+
+/*Moviments List*/
+
+#moviments-container {
+    padding: 50px;
+}
+
+#moviments-container h2 {
+    margin-bottom: 10px;
+}
+
+#cards-container {
+    display: flex;
+}
+
+#moviments-container .card {
+    flex: 1 1 0;
+    max-width: 25%;
+    border-radius: 10px;
+    padding: 0;
+    margin: 5px;
+}
+
+#moviments-container img {
+    max-height: 150px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card .card-title {
+    color: #212121;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Moviment Create Page */
+
+#moviment-create-container {
+    padding: 30px;
+}
+
+#moviment-create-container label {
+    font-weight: bold;
+}
+
+#moviment-create-container input, 
+#moviment-create-container textarea {
+    font-size: 12px;
+}
+
+/*Footer*/
+
+footer {
+    text-align: center;
+    background-color: #353e48;
+    color: #fff;
+    padding: 30px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin-bottom: 0;
 }
