@@ -17,4 +17,5 @@ use App\Http\Controllers\MovimentController;
 
 Route::get('/', [MovimentController::class, 'index']);
 Route::get('/moviments/create', [MovimentController::class, 'create']);
+Route::get('/moviments/{id}', [MovimentController::class, 'show']);
 Route::post('/moviments', [MovimentController::class, 'store']);

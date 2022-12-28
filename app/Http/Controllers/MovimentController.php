@@ -10,9 +10,20 @@ class MovimentController extends Controller
 {
     public function index() {
 
-        $moviments = Moviment::all();
+        $search = request('search');
 
-        return view('welcome', ['moviments' => $moviments]);
+        if ($search) {
+
+            $moviment = Moviment::where ([
+                ['title', 'like', '%' . $search . '%']
+            ])->get();
+
+        } else {
+            $moviment = Moviment::all();
+        }
+      
+
+        return view('welcome', ['moviments' => $moviment, 'search' => $search]);
     }
 
     public function create() {
@@ -25,9 +36,32 @@ class MovimentController extends Controller
         $moviment->title = $request->title;
         $moviment->description = $request->description;
         $moviment->link = $request->link;
+        $moviment->tags = $request->tags;
+
+        //Imagem Upload
+        if ($request->hasfile('image') && $request->file('image')->isvalid()) {
+            
+            $requestImage = $request->image;
+
+            $extension = $requestImage->extension();
+
+            $imageName = md5($requestImage->getClientOriginalName() . strtotime("now")) . "." . $extension;
+
+            $requestImage->move(public_path('img/moviments'), $imageName);
+
+            $moviment->image = $imageName;
+
+        }
 
         $moviment->save();
 
         return redirect('/')->with('msg', 'Movimento criado com sucesso');
+    }
+
+    public function show ($id) {
+        
+        $moviment = Moviment::findOrFail($id);
+
+        return view('moviments.show', ['moviment' => $moviment]);
     }
 }

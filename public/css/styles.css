@@ -101,11 +101,11 @@ header
 }
 
 #moviments-container .card {
-    flex: 1 1 0;
+    flex: 1 1 24%;
     max-width: 25%;
     border-radius: 10px;
     padding: 0;
-    margin: 5px;
+    margin: .5%;
 }
 
 #moviments-container img {
@@ -136,6 +136,31 @@ header
     font-size: 12px;
 }
 
+/* Moviment Page */
+
+#image-container,
+#info-container {
+    margin-top: 30px;
+}
+
+#image-container img {
+    border-radius: 10px;
+}
+
+
+#info-container p {
+    margin: 0;
+    display: flex;
+    text-align: justify;
+}
+
+#info-container a {
+    margin: 20px 0;
+}
+
+.tags {
+    font-weight: bold;
+}
 /*Footer*/
 
 footer {
