@@ -14,18 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 use App\Http\Controllers\MovimentController;
+use Laravel\Jetstream\Rules\Role;
 
 Route::get('/', [MovimentController::class, 'index']);
 Route::get('/moviments/create', [MovimentController::class, 'create'])->middleware('auth');
 Route::get('/moviments/{id}', [MovimentController::class, 'show']);
 Route::post('/moviments', [MovimentController::class, 'store']);
+Route::delete('moviments/{id}', [MovimentController::class, 'destroy'])->middleware('auth');
+Route::get('/dashboard', [MovimentController::class, 'dashboard'])->middleware('auth');
+Route::get('moviments/edit/{id}', [MovimentController::class, 'edit'])->middleware('auth');
+Route::put('moviments/update/{id}', [MovimentController::class, 'update'])->middleware('auth');
 
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified'
-])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
-});
