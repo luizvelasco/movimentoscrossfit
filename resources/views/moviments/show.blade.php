@@ -12,7 +12,6 @@
             <div id="info-container" class="col-md-6">
                 <h1>{{ $moviment->title }}</h1>
                 <p>{{ $moviment->description }}</p>
-                <p>Tags:  {{ $moviment->tags }}</p>
                 <p><a href= {{ $moviment->link }} class="btn btn-primary" target="_blank">Assistir</a></p>
             </div>
         </div>

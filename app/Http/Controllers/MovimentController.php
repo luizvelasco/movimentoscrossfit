@@ -36,7 +36,7 @@ class MovimentController extends Controller
         $moviment->title = $request->title;
         $moviment->description = $request->description;
         $moviment->link = $request->link;
-        $moviment->tags = $request->tags;
+        // $moviment->tags = $request->tags;
 
         //Imagem Upload
         if ($request->hasfile('image') && $request->file('image')->isvalid()) {

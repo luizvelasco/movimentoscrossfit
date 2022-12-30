@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MovimentController;
 
 Route::get('/', [MovimentController::class, 'index']);
-Route::get('/moviments/create', [MovimentController::class, 'create']);
+Route::get('/moviments/create', [MovimentController::class, 'create'])->middleware('auth');
 Route::get('/moviments/{id}', [MovimentController::class, 'show']);
 Route::post('/moviments', [MovimentController::class, 'store']);
 
