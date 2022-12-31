@@ -51,7 +51,12 @@ class MovimentController extends Controller
 
             $moviment->image = $imageName;
 
+        } else {
+
+            $moviment->image = "";
+
         }
+
 
         $moviment->save();
 

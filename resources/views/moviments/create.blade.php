@@ -18,11 +18,11 @@
         </div>
         <div class="form-group">
             <label for="image">Movimento: </label>
-            <input type="text" class="form-control" id="title" name="title" placeholder="Nome do Movimento">
+            <input type="text" class="form-control" id="title" name="title" placeholder="Nome do Movimento" required>
         </div>
         <div class="form-group">
             <label for="title">Descrição: </label>
-            <textarea class="form-control" name="description" id="description" placeholder="Descreva o movimento" ></textarea>
+            <textarea class="form-control" name="description" id="description" placeholder="Descreva o movimento" required></textarea>
         </div>
         {{-- <div class="form-group">
             <label for="tags">Tags: </label>
@@ -30,7 +30,7 @@
         </div> --}}
         <div class="form-group">
             <label for="title">Link: </label>
-            <input type="text" class="form-control" id="link" name="link" placeholder="Link do Movimento">
+            <input type="text" class="form-control" id="link" name="link" placeholder="Link do Movimento" required>
         </div>
         <input type="submit" class="btn btn-primary" value="Cadastrar Movimento">
     </form>

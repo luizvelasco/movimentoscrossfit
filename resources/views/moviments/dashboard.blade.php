@@ -28,7 +28,7 @@
                             <form action="/moviments/{{ $moviment->id }}" method="POST">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="btn btn-danger delete-btn"><ion-icon name="trash-outline"></ion-icon> Deletar</button>
+                                <button type="submit" class="btn btn-danger delete-btn" data-toggle="modal" data-target="#exampleModal"><ion-icon name="trash-outline"></ion-icon> Deletar</button>
                             </form>
                         </td>
                     </tr>
