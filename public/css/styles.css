@@ -102,14 +102,14 @@ header
 
 #moviments-container .card {
     flex: 1 1 24%;
-    max-width: 25%;
+    max-width: 19%;
     border-radius: 10px;
     padding: 0;
     margin: .5%;
 }
 
 #moviments-container img {
-    max-height: 150px;
+    max-height: 130px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
